@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:minimum_zoom_percentage_demo"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfPdfViewer.XForms;assembly=Syncfusion.SfPdfViewer.XForms"
+             x:Class="minimum_zoom_percentage_demo.MainPage">
+
+    <Grid>
+        <syncfusion:SfPdfViewer x:Name="pdfViewer" MinimumZoomPercentage="50" />
+    </Grid>
+
+</ContentPage>
