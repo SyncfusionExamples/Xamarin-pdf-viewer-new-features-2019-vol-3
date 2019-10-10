@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfPdfViewer.XForms;assembly=Syncfusion.SfPdfViewer.XForms"
+             mc:Ignorable="d"
+             x:Class="load_encrypted_pdf_demo.MainPage">
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid x:Name="popupgrid">
+                <AbsoluteLayout Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                    <ContentView x:Name="popupLoginView" BackgroundColor="#C0808080" Padding="10, 0" IsVisible="false" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                        <StackLayout BackgroundColor="Gray" VerticalOptions="Center" HorizontalOptions="Center">
+                            <Grid x:Name="contentsGrid" BackgroundColor="White">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="35"/>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="50"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="150"/>
+                                </Grid.ColumnDefinitions>
+                                <Label x:Name="m_title" Grid.Row="0" Grid.ColumnSpan="2" HorizontalTextAlignment="Start" FontAttributes="Bold" Margin="20,0,20,0" WidthRequest="280" HeightRequest="30" VerticalOptions="End" HorizontalOptions="Center" Text="Password Protected"/>
+                                <Label x:Name="m_infoLabel" Grid.Row="1" Grid.ColumnSpan="2" HorizontalTextAlignment="Start" Margin="20,0,20,0" WidthRequest="280" HeightRequest="30" HorizontalOptions="Center" Text="Enter the password to open the PDF file"/>
+                                <Entry x:Name="PasswordEntry" TextChanged="PasswordEntry_TextChanged" Grid.Row="2" Grid.ColumnSpan="2" BackgroundColor="Transparent" WidthRequest="100" HeightRequest="30" Margin="20,0,20,0" IsPassword="True" Placeholder="password: syncfusion"/>
+                                <Label x:Name="MessageLabel" Grid.Row="3" Grid.ColumnSpan="2" WidthRequest="100" HeightRequest="20" TextColor="Red"  Margin="20,0,20,0" Text=""/>
+                                <Button x:Name="OKButton" Clicked="OKButton_Clicked"  IsEnabled="False" Grid.Row="4" Grid.Column="1" VerticalOptions="Center" WidthRequest="100" CornerRadius="4" BackgroundColor="Transparent" HeightRequest="30" Margin="20,0,20,20" Text="OK"/>
+                            </Grid>
+                        </StackLayout>
+                    </ContentView>
+                </AbsoluteLayout>
+            </Grid>
+            <Grid x:Name="pdfviewergrid">
+                <syncfusion:SfPdfViewer x:Name="pdfViewer" AutomationProperties.IsInAccessibleTree="False"/>
+            </Grid>
+            
+        </Grid>
+    </ContentPage.Content>    
+</ContentPage>

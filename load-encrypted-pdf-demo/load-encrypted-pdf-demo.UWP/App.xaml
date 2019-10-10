@@ -1,0 +1,8 @@
+﻿<Application
+    x:Class="load_encrypted_pdf_demo.UWP.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:load_encrypted_pdf_demo.UWP"
+    RequestedTheme="Light">
+
+</Application>
